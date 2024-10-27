@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "format": "npx eslint . --fix && npx prettier . --write",
+    "check_format": "npx eslint . && npx prettier . --check"
   },
+  "type": "module",
   "author": "BRANDALERO, Maycon",
   "license": "ISC",
   "description": "",
@@ -12,6 +15,11 @@
     "@faker-js/faker": "^8.4.1",
     "browserstack-cypress-cli": "^1.31.4",
     "cypress": "^13.13.1",
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-cypress": "^4.0.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3"
   }
 }
