@@ -22,8 +22,5 @@ jobs:
       - name: Inspect Lint
         run: npm run check_format
 
-      - name: Format Lint
-        run: npm run format
-
       - name: Execute Tests
         run: npm run test
