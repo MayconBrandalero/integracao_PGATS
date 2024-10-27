@@ -6,24 +6,24 @@ on:
 jobs:
   e2e-tests:
     runs-on: ubuntu-latest
-  
-  steps:
-    - name: Realize Checkout
-      uses: actions/checkout@v4
 
-    - name: Install Node v18
-      uses: actions/setup-node@v2
-      with:
-        node-version: '18'
-    
-    - name: Install Dependencies
-      run: npm install
+    steps:
+      - name: Realize Checkout
+        uses: actions/checkout@v4
 
-    - name: Inspect Lint
-      run: npm run check_format
+      - name: Install Node v18
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
 
-    - name: Format Lint
-      run: npm run format
+      - name: Install Dependencies
+        run: npm install
 
-    - name: Execute Tests
-      run: npm run test
+      - name: Inspect Lint
+        run: npm run check_format
+
+      - name: Format Lint
+        run: npm run format
+
+      - name: Execute Tests
+        run: npm run test
